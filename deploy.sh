@@ -6,8 +6,10 @@ sudo npm install -g pm2
 pm2 stop simple_app
 # change directory into folder where application is downloaded
 cd SimpleApplication/
-# Install application dependencies
+# Install application dependancies
 npm install
+echo $PRIVATE_KEY > privatekey.pem
+echo $SERVER > server.crt
 # Start the application with the process nam example_app using pm2
 pm2 start ./bin/www --name simple_app
 
